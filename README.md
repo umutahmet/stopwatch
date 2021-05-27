@@ -13,20 +13,20 @@ Given the above change, we would need to refactor the `handleDeleteClick` method
 
 ### Component unmount
 When the component unmounts from the DOM, we aren't clearing the interval that may still be running. This can cause memory leaks in the application so to counter this I would add the
-`componentWillUnmount` lifecylce method and clear the interval here to prevent that fromm happening. 
+`componentWillUnmount` lifecylce method and clear the interval here to prevent that from happening. 
 
 ### Typo
 Small but confusing `handleLabClick` method is incorrectly named. 
 
 ### Further improvements
-- Add interfaces for the class state and lap component
+- Add interfaces for the class state and `Lap` component
 - Add types to all of the methods for consitancy and clarity 
 
 ## Going forward
 If I had more time I would:
 - Convert the class to a function
-- Make use of react useState for state managament
-- Create and extract statless components for the timer / button ui elements
+- Make use of react `useState` for state managament
+- Create and extract stateless components for the Timer / Button ui elements
 - Move `formattedSeconds` helper function to another file
 - Use `requestAnimationFrame` instead of `setInterval` for smoother rendering 
-- Use `Map()` instead of `Array` to store the lap times to piggyback functionality such as `delete` instead of filtering.
+- Use `Map()` instead of `Array` to store the lap times to piggyback functionality such as `delete` instead of filtering
